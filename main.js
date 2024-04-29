@@ -78,9 +78,16 @@ console.log(cloudyAndRainy('cloudy','cloudy'));
 //13.Write a function called weatherActivities that takes a type of weather (as a string) and returns an activity someone can do in that weather. Please include activities for at least four types of weather conditions.
 
 let weatherActivities = (weather) => {
-    if(weather==='rainy') return "Hot chocolate"
-    else if(weather==='sunny') return "5arejna papa te9s mezyen"
-    else finally(weather==='')
+    switch(weather.toLowerCase()) {
+        case "sunny":
+            return "Go for a hike or have a picnic in the park.";
+        case "rainy":
+            return "Stay indoors and read a book or watch a movie.";
+        case "snowy":
+            return "Build a snowman or go skiing/snowboarding.";
+        case "windy":
+            return "Fly a kite or go windsurfing if you're near water.";
+        default:
+            return "Sorry, I don't have any activity suggestions for that type of weather.";
+    }
  }  
- weatherActivities(“rainy”) -> “hot chocolate” 
- weatherActivities(“sunny”) -> “running
